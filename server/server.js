@@ -30,7 +30,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://capstone-one-theta.vercel.app"
+      "https://capstone-one-theta.vercel.app",
       "https://capstone-9olqb1d42-jagadeeshs-projects-8acebe1d.vercel.app"
     ],
     credentials: true
