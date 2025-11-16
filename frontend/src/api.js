@@ -1,14 +1,14 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://capstone-3-r308.onrender.com",
+  baseURL: "https://capstone-3-r308.onrender.com/api/auth",
   withCredentials: true,
 });
 
 // --- AUTH ROUTES ---
 export const registerUser = (data) => API.post("/register", data);
 export const loginUser = (data) => API.post("/login", data);
-export const logoutUser = (data) => API.post("/logout", data);
+export const logoutUser = () => API.post("/logout");
 export const checkAuth = () => API.get("/is-auth");
 
 // Firebase Login
