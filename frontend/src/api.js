@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api/auth",
+  baseURL: "https://capstone-3-r308.onrender.com",
   withCredentials: true,
 });
 
