@@ -24,19 +24,27 @@ const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({
-  origin: process.env.CLIENT_URL || "http://localhost:5173",
-  credentials: true
-}));
+
+// ⭐ UPDATED CORS — supports Vercel + localhost + cookies
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://capstone-one-theta.vercel.app"
+    ],
+    credentials: true
+  })
+);
 
 // Routes
 import authRoutes from "./routes/authRoutes.js";
 app.use("/api/auth", authRoutes);
 
 // ---------------- MONGODB CONNECTION -----------------
-mongoose.connect(process.env.MONGODB_URI)
+mongoose
+  .connect(process.env.MONGODB_URI)
   .then(() => console.log("MongoDB connected successfully"))
-  .catch(err => console.error("MongoDB error:", err));
+  .catch((err) => console.error("MongoDB error:", err));
 
 // ---------------- START SERVER -----------------------
 const PORT = process.env.PORT || 5000;
