@@ -11,7 +11,6 @@ import authRoutes from "./routes/authRoutes.js";
 // This safely loads JSON file in an ES Module context, fixing the 'assert' error.
 const require = createRequire(import.meta.url);
 // ⚠️ Ensure the file name matches your downloaded key!
-const serviceAccount = require('./serviceAccountKey.json.json'); 
 
 dotenv.config();
 
