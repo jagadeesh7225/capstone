@@ -1,0 +1,9 @@
+express - To Create a App.
+cors -  To connect Frontend with Backend.
+dotenv - Help us to store the environmental variables in the Backend.
+nodemon - It help use to keep the server alive after any changes in the code.
+jsonwebtoken - Used to Create a token for authentication.
+mongoose - It helps to connect with the mongodb database.
+bcryptjs - used to encrypt the password and store in database.
+nodemailer - It help us to send the emails.
+cookie-parser - used to send the cookies in API response.
